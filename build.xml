@@ -600,7 +600,7 @@ $Id$
   <!-- =================================================================== -->
   <!-- Creates the xsltc jar including all support jars                    -->
   <!-- =================================================================== -->
-  <target name="xsltc.jar" depends="xsltc.compile,xsltc.copy-deps-jars"
+  <target name="xsltc.jar" depends="xsltc.compile"
      description="Jar xsltc,xml,BCEL,JLex,java_cup,runtime and jakarta regexp">
 
     <!-- create new META-INF dir w/ transformer factory default -->
@@ -683,7 +683,7 @@ $Id$
   <!-- =================================================================== -->
   <!-- Creates one big xalan jar (Xalan interpretive + XSLTC + support jars) -->
   <!-- =================================================================== -->
-  <target name="jar" depends="xalan-interpretive.compile,xsltc.compile,xsltc.copy-deps-jars"
+  <target name="jar" depends="xalan-interpretive.compile,xsltc.compile"
     description="Jar up everything (Xalan, XSLTC and XSLTC dependencies)" >
     
     <!-- Copy over the manifest, with filtering (for version number) -->
